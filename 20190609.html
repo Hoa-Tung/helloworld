@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 已知如下数组：
+        var arr = [[1,2,2],[3,4,5,5],[6,7,8,9,[11,12,[12,13,[14]]]],10];
+        // 编写一个程序将数组扁平化去并除其中重复部分数据,最终得到一个升序且不重复的数组
+        // let set = new Set(arr);
+        // console.log(set);
+        // 新增一个知识：
+        // Array.prototype.flat();
+        // flat()方法会按照一个可指定的深度递归遍历数组，并将所有元素与遍历到子数组中的元素合并为一个新数组返回
+        // 语法：var newArray = arr.flat(depth)
+        // depth可选，指定也要提取嵌套数组的结构深度，默认为1，当depth=Infinity 展开任意深度的嵌套数组
+        // let flatArr = arr.flat(4); //扁平化
+        // let disArr = Array.from(new set(flatArr)) //去重
+        // let result = disArr.sort((a,b)=>{return a-b})
+        // console.log(result)
+
+        arr=arr. flat(Infinity);
+        arr=Array. from(new Set(arr));
+        arr=arr. sort((a,b)=>{ return a-b});
+        alert(arr);
+    </script>
+</body>
+</html>
